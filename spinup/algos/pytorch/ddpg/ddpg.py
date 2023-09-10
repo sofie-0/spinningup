@@ -185,7 +185,7 @@ def ddpg(env_fn, actor_critic=core.MLPActorCritic, ac_kwargs=dict(), seed=0,
 
     # Set up optimizers for policy and q-function
     pi_optimizer = Adam(ac.pi.parameters(), lr=pi_lr)
-    q_optimizer = Adam(ac.q.parameters(), lr=q_lr)
+    q_optimizer = Adam(ac.q.parameters(), lr=q_lr, k=1e-2) #changed 
 
     # Set up model saving
     logger.setup_pytorch_saver(ac)
