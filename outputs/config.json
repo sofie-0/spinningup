@@ -1,0 +1,47 @@
+{
+    "ac_kwargs":	{
+        "activation":	"ReLU",
+        "hidden_sizes":	[
+            400,
+            300
+        ]
+    },
+    "act_noise":	0.1,
+    "actor_critic":	"MLPActorCritic",
+    "batch_size":	100,
+    "env_fn":	"<function ddpg_cart_pole_runner.<locals>.<lambda> at 0x7fb4f7fe7378>",
+    "epochs":	100,
+    "exp_name":	"experiment_name",
+    "gamma":	0.99,
+    "logger":	{
+        "<spinup.utils.logx.EpochLogger object at 0x7fb50de10518>":	{
+            "epoch_dict":	{},
+            "exp_name":	"experiment_name",
+            "first_row":	true,
+            "log_current_row":	{},
+            "log_headers":	[],
+            "output_dir":	"./outputs/",
+            "output_file":	{
+                "<_io.TextIOWrapper name='./outputs/progress.txt' mode='w' encoding='UTF-8'>":	{
+                    "mode":	"w"
+                }
+            }
+        }
+    },
+    "logger_kwargs":	{
+        "exp_name":	"experiment_name",
+        "output_dir":	"./outputs/"
+    },
+    "max_ep_len":	1000,
+    "num_test_episodes":	10,
+    "pi_lr":	0.0001,
+    "polyak":	0.995,
+    "q_lr":	0.001,
+    "replay_size":	1000000,
+    "save_freq":	1,
+    "seed":	0,
+    "start_steps":	10000,
+    "steps_per_epoch":	200,
+    "update_after":	1000,
+    "update_every":	50
+}
